@@ -1,7 +1,7 @@
 
-package waskin2e;
+package pitogo2e;
 
-public class Waskin2E {
+public class Pitogo {
 
     public static void main(String[] args) {
       grade grs = new grade();

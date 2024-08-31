@@ -1,5 +1,5 @@
 
-package waskin2e;
+package pitogo2e;
 
 import java.util.Scanner;
 

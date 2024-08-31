@@ -1,4 +1,4 @@
-package waskin2e;
+package pitogo2e;
 
 public class grades {
     String name;
