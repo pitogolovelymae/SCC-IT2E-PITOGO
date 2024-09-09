@@ -1,34 +1,33 @@
-
 package pitogo2e;
 
-import java.util.Scanner;
-
 public class Sales {
-    Scanner input = new Scanner(System.in);
     
-    public void getsales(){
-        System.out.print("Customer Name: ");
-        String customer = input.nextLine();
-        System.out.print("Product Name: ");
-        String product = input.nextLine();
-        System.out.print("Quantity: ");
-        int quantity = input.nextInt();
-        System.out.print("Price: ");
-        float price = input.nextFloat();
-        System.out.print("Cash: ");
-        float cash = input.nextFloat();
-        
-        System.out.println("\n-----------------------------------");
-        System.out.println("RECIEPT");
-        System.out.println("-----------------------------------");
-        
-        System.out.println("Name: " + customer);
-        System.out.println("Product: " + product);
-        System.out.println("Quantity: " + quantity);
-        float total = price * quantity;
-        System.out.println("Total Due: " + total);
-        System.out.println("Chance: " + (cash - total));
+    String cname, pname;
+    int qty;
+    double price, cash;
+    
+    
+    public void addSales(String coname, String poname, int quant, double pri, double csh){
+        this.cname = coname;
+        this.pname = poname;
+        this.qty = quant;
+        this.price = pri;
+        this.cash = csh;
         
     }
     
+       
+        
+    public void viewSales(){
+        double tdue = qty * price;
+        double change = cash - tdue;
+        
+        System.out.printf("%-10s %-10s %-10d %-10.2f %-10.2f %-10.2f %-10.2f",
+                this.cname, this.pname, this.qty, this.price, this.cash, tdue, change);
+    }
+    
+    
+    
 }
+    
+

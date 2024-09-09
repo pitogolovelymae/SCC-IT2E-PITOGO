@@ -1,9 +1,12 @@
+
 package pitogo2e;
+
 import java.util.Scanner;
 
-public class grade {
+public class Grade {
+    
     public void displayGrade(){
-        grades[] gr = new grades[100];
+        Grades[] gr = new Grades[100];
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Enter number of students: ");
@@ -11,7 +14,7 @@ public class grade {
         
         
         for(int i = 0; i < st; i++){
-            System.out.println("Enter details of student "+(i+1));
+            System.out.println("\nEnter details of student "+(i+1));
             System.out.print("ID: ");
             int id = sc.nextInt();
             System.out.print("Name: ");
@@ -25,7 +28,7 @@ public class grade {
             System.out.print("Final: ");
             double fin = sc.nextDouble();
             
-            gr[i] = new grades();
+            gr[i] = new Grades();
             gr[i].addGrades(id,name,pre,mid,pref,fin);
         }
         
@@ -46,10 +49,12 @@ public class grade {
             }
         }
         
-        System.out.println("--------------------------------------");
+        System.out.println("\n----------------------------------------------------------");
         System.out.println("No. of students: "+st);
         System.out.println("Total Class Average: "+tca/st);
         System.out.println("No. of Passed: "+passed);
         System.out.println("No. of Failed: "+failed);
     }
 }
+
+
